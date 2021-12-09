@@ -89,7 +89,41 @@
               </li>
             </ul>
           </li>
-
+          <li class="nav-item @if(request()->segment(2) == "posts") menu-open @endif">
+            <a href="#" class="nav-link @if(request()->segment(2) == "posts") active @endif">
+              <i class="nav-icon fas fa-copy"></i>
+              <p>
+                Theme Option
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{url('/admin/themes')}}" class="nav-link @if((request()->segment(2) == "posts") && (request()->segment(3) == "")) active-submenu @endif">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Backend</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{url('/admin/themes/create')}}" class="nav-link  @if((request()->segment(2) == 'posts') && (request()->segment(3) == 'create')) active-submenu @endif">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Add Backend</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{url('/admin/themes/frontend')}}" class="nav-link @if((request()->segment(2) == "posts") && (request()->segment(3) == "")) active-submenu @endif">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Frontend</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{url('/admin/themes/frontend/create')}}" class="nav-link  @if((request()->segment(2) == 'posts') && (request()->segment(3) == 'create')) active-submenu @endif">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Add Frontend</p>
+                </a>
+              </li>
+            </ul>
+          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
