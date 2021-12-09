@@ -5,7 +5,7 @@
         <div class="container-fluid">
           <div class="row mb-2">
             <div class="col-sm-6">
-              <h1>{{$pageTitle ?? 'Post'}}</h1>
+              <h1>{{$pageTitle ?? 'Page'}}</h1>
             </div>
             <div class="col-sm-6">
               <ol class="breadcrumb float-sm-right">
@@ -25,7 +25,7 @@
               <div class="card">
                 <div class="card-header">
                   <h3 class="card-title">
-                      <a name="" id="" class="btn btn-outline-primary btn-sm" href="{{url('admin/posts/create')}}" role="button">Add Post</a>
+                      <a name="" id="" class="btn btn-outline-primary btn-sm" href="{{url('admin/settings/create')}}" role="button">Add Widget</a>
                   </h3>
                 </div>
                 <!-- /.card-header -->

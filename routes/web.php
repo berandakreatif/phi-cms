@@ -5,9 +5,12 @@ use App\Http\Livewire\Admin\Page\AddPage;
 use App\Http\Livewire\Admin\Page\IndexPage;
 use App\Http\Livewire\Admin\Post\AddPost;
 use App\Http\Livewire\Admin\Post\IndexPost;
-use App\Http\Livewire\Admin\Settings;
-use App\Http\Livewire\Admin\Widgets;
+use App\Http\Livewire\Admin\Setting\AddSetting;
+use App\Http\Livewire\Admin\Setting\IndexSetting;
+use App\Http\Livewire\Admin\Widget\AddWidget;
+use App\Http\Livewire\Admin\Widget\IndexWidget;
 use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,12 +32,22 @@ Route::middleware(['auth'])->group(function () {
     Route::prefix('admin')->group(function () {
         Route::get('/', Dashboard::class);
         Route::get('dashboard', Dashboard::class);
-        Route::get('pages', IndexPage::class);
-        Route::get('pages/create', AddPage::class);
-        Route::get('posts', IndexPost::class);
-        Route::get('posts/create', AddPost::class);
-        Route::get('settings', Settings::class);
-        Route::get('widgets', Widgets::class);
+        Route::prefix('pages')->group(function () {
+            Route::get('/', IndexPage::class);
+            Route::get('create', AddPage::class);
+        });
+        Route::prefix('posts')->group(function () {
+            Route::get('/', IndexPost::class);
+            Route::get('create', AddPost::class);
+        });
+        Route::prefix('widgets')->group(function () {
+            Route::get('/', IndexWidget::class);
+            Route::get('create', AddWidget::class);
+        });
+        Route::prefix('settings')->group(function () {
+            Route::get('/', IndexSetting::class);
+            Route::get('create', AddSetting::class);
+        });
     });
 });
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

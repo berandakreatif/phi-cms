@@ -2,11 +2,11 @@
     <hr>
       <!-- Sidebar Menu -->
       <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <!-- Add icons to the links using the .nav-icon class
+        <ul class="nav nav-pills nav-sidebar nav-child-indent flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="{{url('admin/setting')}}" class="nav-link">
+            <a href="{{url('admin/settings')}}" class="nav-link">
               <i class="nav-icon fas fa-cog"></i>
               <p>
                 All Settings
@@ -23,19 +23,19 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{url('admin/setting/user')}}" class="nav-link">
+                <a href="{{url('admin/settings/user')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Users</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{url('admin/setting/role')}}" class="nav-link">
+                <a href="{{url('admin/settings/role')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Role</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{url('admin/permission')}}" class="nav-link">
+                <a href="{{url('admin/settings/permission')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Permissions</p>
                 </a>

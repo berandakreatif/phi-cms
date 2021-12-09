@@ -20,14 +20,28 @@
               </p>
             </a>
           </li>
-          <li class="nav-item">
-            <a href="{{url('/admin/widgets')}}" class="nav-link @if(request()->segment(2) == "widgets") active @endif">
+          <li class="nav-item @if(request()->segment(2) == "widgets") menu-open @endif">
+            <a href="#" class="nav-link @if(request()->segment(2) == "widgets") active @endif">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Widgets
-                <span class="right badge badge-danger">New</span>
+                <i class="fas fa-angle-left right"></i>
               </p>
             </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{url('/admin/widgets')}}" class="nav-link @if((request()->segment(2) == "widgets") && (request()->segment(3) == "")) active-submenu @endif">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>All Widgets</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{url('/admin/widgets/create')}}" class="nav-link nav-link  @if((request()->segment(2) == 'widgets') && (request()->segment(3) == 'create')) active-submenu @endif">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Add New Widgets</p>
+                </a>
+              </li>
+            </ul>
           </li>
           <li class="nav-item @if(request()->segment(2) == "pages") menu-open @endif">
             <a href="#" class="nav-link @if(request()->segment(2) == "pages") active @endif">
@@ -68,7 +82,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{url('/admin/posts/create')}}" class="nav-link">
+                <a href="{{url('/admin/posts/create')}}" class="nav-link  @if((request()->segment(2) == 'posts') && (request()->segment(3) == 'create')) active-submenu @endif">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Add New Post</p>
                 </a>
