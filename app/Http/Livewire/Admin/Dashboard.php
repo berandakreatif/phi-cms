@@ -4,6 +4,7 @@ namespace App\Http\Livewire\Admin;
 
 use App\Models\Page;
 use App\Models\Post;
+use App\Models\User;
 use Livewire\Component;
 
 class Dashboard extends Component
@@ -15,6 +16,7 @@ class Dashboard extends Component
         ];
 
         $data = [
+            'userCount' => User::all()->count(),
             'pageCount' => Page::all()->count(),
             'postCount' => Post::all()->count()
         ];

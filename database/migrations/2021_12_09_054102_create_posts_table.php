@@ -15,19 +15,19 @@ class CreatePostsTable extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
-            $table->integer('cat');
-            $table->integer('type');
-            $table->string('slug');
-            $table->string('title');
-            $table->string('subtitle');
-            $table->longtext('content');
-            $table->string('cover');
-            $table->text('images');
-            $table->longtext('extra');
-            $table->tinyinteger('status');
-            $table->string('meta-description');
-            $table->string('meta-keywords');
-            $table->string('meta-author');
+            $table->integer('cat')->nullable();
+            $table->integer('type')->nullable();
+            $table->string('slug')->nullable();
+            $table->string('title')->nullable();
+            $table->string('subtitle')->nullable();
+            $table->longtext('content')->nullable();
+            $table->string('cover')->nullable();
+            $table->text('images')->nullable();
+            $table->longtext('extra')->nullable();
+            $table->tinyinteger('status')->default(0);
+            $table->string('meta-description')->nullable();
+            $table->string('meta-keywords')->nullable();
+            $table->string('meta-author')->nullable();
             $table->timestamps();
         });
     }

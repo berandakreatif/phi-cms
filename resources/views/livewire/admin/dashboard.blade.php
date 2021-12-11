@@ -17,7 +17,7 @@
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
-
+    <form>
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
@@ -57,12 +57,12 @@
             <!-- small box -->
             <div class="small-box bg-warning">
               <div class="inner">
-                <h3>44</h3>
+                <h3>{{$userCount ?? 0}}</h3>
 
-                <p>User Registrations</p>
+                <p>User Count</p>
               </div>
               <div class="icon">
-                <i class="ion ion-person-add"></i>
+                <i class="fa fa-users"></i>
               </div>
               <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
@@ -88,6 +88,8 @@
       </div><!-- /.container-fluid -->
     </section>
     <!-- /.content -->
+    </form>
+
   </div>
 
 </div>

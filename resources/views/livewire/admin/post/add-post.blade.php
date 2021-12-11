@@ -55,39 +55,81 @@
                         <div class="form-group row">
                           <label for="inputName" class="col-sm-2 col-form-label">Title</label>
                           <div class="col-sm-10">
-                            <input type="email" class="form-control" id="inputName" placeholder="Name">
+                            <input type="text" class="form-control" wire:model="title" id="inputName" placeholder="Name">
                           </div>
                         </div>
                         <div class="form-group row">
                           <label for="inputName" class="col-sm-2 col-form-label">Sub Title</label>
                           <div class="col-sm-10">
-                            <input type="email" class="form-control" id="inputName" placeholder="Name">
-                          </div>
-                        </div>
-                        <div class="form-group row">
-                          <label for="inputName" class="col-sm-2 col-form-label">Title</label>
-                          <div class="col-sm-10">
-                            <input type="email" class="form-control" id="inputName" placeholder="Name">
+                            <input type="text" class="form-control" wire:model="subtitle" id="inputName" placeholder="Name">
                           </div>
                         </div>
                         <div class="form-group row">
                           <label for="inputExperience" class="col-sm-2 col-form-label">Content</label>
                           <div class="col-sm-10">
-                            <textarea class="form-control" id="inputExperience" placeholder="Experience"></textarea>
+                            <textarea class="form-control" id="inputExperience" wire:model="content" placeholder="Content Here"></textarea>
+                          </div>
+                        </div>
+                        <hr>
+                        <div class="form-group row">
+                          <label for="inputExperience" class="col-sm-2 col-form-label">Meta Author</label>
+                          <div class="col-sm-10">
+                            <input type="text" class="form-control" wire:model="meta_author" id="inputName" placeholder="Meta Author">
                           </div>
                         </div>
                         <div class="form-group row">
-                          <div class="offset-sm-2 col-sm-10">
-                            <div class="checkbox">
-                              <label>
-                                <input type="checkbox"> I agree to the <a href="#">terms and conditions</a>
-                              </label>
-                            </div>
+                          <label for="inputExperience" class="col-sm-2 col-form-label">Meta Keywords</label>
+                          <div class="col-sm-10">
+                            <input type="text" class="form-control" wire:model="meta_keywords" id="inputName" placeholder="Meta Keywords">
                           </div>
                         </div>
                         <div class="form-group row">
+                          <label for="inputExperience" class="col-sm-2 col-form-label">Meta Description</label>
+                          <div class="col-sm-10">
+                            <input type="text" class="form-control" wire:model="meta_description" id="inputName" placeholder="Meta Description">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="inputExperience" class="col-sm-2 col-form-label">Categry</label>
+                          <div class="col-sm-10">
+                              <select wire:model="cat" class="form-control">
+                                  <optgroup label="Post Status">
+                                      <option value=1>Category One</option>
+                                      <option value=2>Category Two</option>
+                                      <option value=3>Category Three</option>
+                                  </optgroup>
+                              </select>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="inputExperience" class="col-sm-2 col-form-label">Type</label>
+                          <div class="col-sm-10">
+                              <select name="" wire:model="type" class="form-control">
+                                  <optgroup label="Post Status">
+                                      <option value=1>Type 1</option>
+                                      <option value=2>Type 2</option>
+                                      <option value=3>Type 3</option>
+                                      <option value=4>Type 4</option>
+                                      <option value=5>Type 5</option>
+                                  </optgroup>
+                              </select>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="inputExperience" class="col-sm-2 col-form-label">Status</label>
+                          <div class="col-sm-10">
+                              <select name="" id="" wire:model="status" class="form-control">
+                                  <optgroup label="Post Status">
+                                      <option value=1>Publish</option>
+                                      <option value=0>Draft</option>
+                                  </optgroup>
+                              </select>
+                          </div>
+                        </div>
+
+                        <div class="form-group row">
                           <div class="offset-sm-2 col-sm-10">
-                            <button type="submit" class="btn btn-danger">Submit</button>
+                            <button wire:click="store()" class="btn btn-danger">Save Data</button>
                           </div>
                         </div>
                       </form>

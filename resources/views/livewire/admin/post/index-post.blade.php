@@ -32,34 +32,30 @@
                 <div class="card-body">
                   <table class="datatable table table-bordered table-hover">
                     <thead>
-                    <tr>
-                      <th>Rendering engine</th>
-                      <th>Browser</th>
-                      <th>Platform(s)</th>
-                      <th>Engine version</th>
-                      <th>CSS grade</th>
-                    </tr>
+                        <tr>
+                            <th>No</th>
+                            <th>Title</th>
+                            <th>Subtitle(s)</th>
+                            <th>Category</th>
+                            <th>Type</th>
+                            <th>Action</th>
+                        </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                      <td>Trident</td>
-                      <td>Internet
-                        Explorer 4.0
-                      </td>
-                      <td>Win 95+</td>
-                      <td> 4</td>
-                      <td>X</td>
-                    </tr>
+                    @if (isset($var['data']))
+                    <?php $no=1;?>
+                        @foreach ($var['data'] as $d)
+                        <tr>
+                            <td>{{$no++}}</td>
+                            <td>{{$d->title ?? ''}}</td>
+                            <td>{{$d->subtitle ?? ''}}</td>
+                            <td>{{$d->cat ?? ''}}</td>
+                            <td>{{$d->type ?? ''}}</td>
+                            <td>X</td>
+                        </tr>
+                        @endforeach
+                    @endif
                     </tbody>
-                    <tfoot>
-                    <tr>
-                      <th>Rendering engine</th>
-                      <th>Browser</th>
-                      <th>Platform(s)</th>
-                      <th>Engine version</th>
-                      <th>CSS grade</th>
-                    </tr>
-                    </tfoot>
                   </table>
                 </div>
                 <!-- /.card-body -->
