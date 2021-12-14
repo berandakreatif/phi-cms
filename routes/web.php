@@ -47,7 +47,7 @@ Route::get('/welcome', function () {
 
 Route::get('/', homepage::class);
 Route::get('/service', Service::class);
-Route::get('/service/{slug}', ServiceDetail::class);
+Route::get('/service/{slug}-{slug2?}', ServiceDetail::class);
 Route::get('/portfolio', Portfolio::class);
 Route::get('/portfolio/{slug}', PortfolioDetail::class);
 Route::get('/blog', Blog::class);

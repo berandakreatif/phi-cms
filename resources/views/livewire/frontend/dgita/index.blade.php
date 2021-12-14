@@ -19,8 +19,15 @@
         <link rel="stylesheet" href="{{asset('frontend')}}/dgita/css/ignore_for_wp.css" />
         <link rel="stylesheet" href="{{asset('frontend')}}/dgita/css/theme.css" />
         <link rel="stylesheet" href="{{asset('frontend')}}/dgita/css/responsive.css" />
+        <link rel="stylesheet" href="{{asset('frontend')}}/dgita/css/custom.css" />
 
         <link rel="icon" type="image/png" href="{{asset('logobox.png')}}" />
+        <style>
+            .mainMenu > ul ul li a {
+                15rem !important;
+            }
+
+        </style>
     </head>
     <body>
         <div class="preloader text-center">
