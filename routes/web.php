@@ -19,6 +19,15 @@ use App\Http\Livewire\Admin\User\AddUser;
 use App\Http\Livewire\Admin\User\IndexUser;
 use App\Http\Livewire\Admin\Widget\AddWidget;
 use App\Http\Livewire\Admin\Widget\IndexWidget;
+use App\Http\Livewire\Frontend\Theme\Aboutus;
+use App\Http\Livewire\Frontend\Theme\Blog;
+use App\Http\Livewire\Frontend\Theme\BlogDetail;
+use App\Http\Livewire\Frontend\Theme\Contactus;
+use App\Http\Livewire\Frontend\theme\homepage;
+use App\Http\Livewire\Frontend\Theme\Portfolio;
+use App\Http\Livewire\Frontend\Theme\PortfolioDetail;
+use App\Http\Livewire\Frontend\Theme\Service;
+use App\Http\Livewire\Frontend\Theme\ServiceDetail;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,9 +41,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/welcome', function () {
     return view('welcome');
 });
+
+Route::get('/', homepage::class);
+Route::get('/service', Service::class);
+Route::get('/service/{slug}', ServiceDetail::class);
+Route::get('/portfolio', Portfolio::class);
+Route::get('/portfolio/{slug}', PortfolioDetail::class);
+Route::get('/blog', Blog::class);
+Route::get('/blog/{slug}', BlogDetail::class);
+Route::get('/aboutus', Aboutus::class);
+Route::get('/contactus', Contactus::class);
 
 Auth::routes();
 

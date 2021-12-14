@@ -5,7 +5,7 @@
     <!-- /.login-logo -->
     <div class="card card-outline card-warning">
       <div class="card-header text-center">
-        <a href="{{url('/login')}}" class="h1">
+        <a href="{{url('/')}}" class="h1">
         <img src="{{asset('logo.png')}}" alt="PhiCMS" style="width: 200px;">
         </a>
       </div>

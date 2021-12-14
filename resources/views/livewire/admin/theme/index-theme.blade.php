@@ -25,7 +25,7 @@
               <div class="card">
                 <div class="card-header">
                   <h3 class="card-title">
-                      <a name="" id="" class="btn btn-outline-primary btn-sm" href="{{url('admin/pages/create')}}" role="button">Add Widget</a>
+                      <a name="" id="" class="btn btn-outline-primary btn-sm" href="{{url('admin/themes/create')}}" role="button">Add Template</a>
                   </h3>
                 </div>
                 <!-- /.card-header -->
